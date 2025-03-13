@@ -1,4 +1,4 @@
-const cacheName = "DefaultCompany-Abdul Khalid Business Card-0.1";
+const cacheName = "DefaultCompany-WeWork Sticker-0.1";
 const contentToCache = [
     "Build/WeWorkSticker.loader.js",
     "Build/WeWorkSticker.framework.js",
