@@ -6,7 +6,7 @@ body { padding: 0; margin: 0; overflow: hidden; }
 #madeby-container {
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 60%;
     transform: translate(-50%, 10%) scale(0.3); /* Scale down to 80% */
 }
 #unity-progress-bar-empty { margin-left: auto; margin-right: auto; width: 141px; height: 18px; margin-top: 10px; background: url('progress-bar-empty-dark.png') no-repeat center }
