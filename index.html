@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WeWork</title>
+    <title>WeWork Sticker</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
@@ -34,7 +34,8 @@
 		<imagetarget id='1' src='targets/1.jpg'></imagetarget>
 		<imagetarget id='2' src='targets/2.jpg'></imagetarget>
 		<imagetarget id='3' src='targets/3.jpg'></imagetarget>
-		<imagetarget id='sricker mumbai' src='targets/sricker mumbai.png'></imagetarget>
+		<imagetarget id='Filteryou' src='targets/Filteryou.png'></imagetarget>
+		<imagetarget id='srickermumbai' src='targets/sricker mumbai.png'></imagetarget>
 
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <canvas id="video-canvas" style="width:100%; height:100%; object-fit:cover; position:absolute"></canvas>
@@ -117,7 +118,7 @@
         <p id="errorText" style="text-align: center; width:60vw; color:#7f3f3f; font-size: max(3vw, 3vh);"></p>
     </div>
     <div id="unity-container">
-      <canvas id="unity-canvas" width=512 height=320 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=600 height=960 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -219,7 +220,7 @@
           codeUrl: buildUrl + "/WeWorkSticker.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "DefaultCompany",
-          productName: "WeWork",
+          productName: "WeWork Sticker",
           productVersion: "0.1",
           showBanner: unityShowBanner,
         };
@@ -485,7 +486,7 @@
            const video = document.getElementById('videoPreview');
             const a = document.createElement('a');
               a.href = video.src;
-            a.download = 'video.webm'; //Set the file extension to webm
+            a.download = 'video.mp4'; //Set the file extension to webm
             a.style.display = 'none';
               document.body.appendChild(a);
              a.click();
@@ -496,7 +497,7 @@
            try{
                 const video = document.getElementById('videoPreview');
                 const blob = await fetch(video.src).then(r => r.blob());
-                const file = new File([blob], "video.webm", { type: "video/webm" });
+                const file = new File([blob], "video.mp4", { type: "video/mp4" });
                 
                 if (navigator.share && navigator.canShare && navigator.canShare({files: [file]})) {
                   await navigator.share({
