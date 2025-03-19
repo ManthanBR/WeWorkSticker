@@ -483,21 +483,14 @@
           INTERNAL_SMOOTHFACTOR_POS: .075,
       }
       function downloadVideo() {
-           const video = document.getElementById('videoPreview');
-            const a = document.createElement('a');
-              a.href = video.src;
-            a.download = 'video.mp4'; //Set the file extension to webm
-            a.style.display = 'none';
-              document.body.appendChild(a);
-             a.click();
-            document.body.removeChild(a);
+        window.unityInstance.SendMessage('ARCamera', 'OnDownloadVideoButtonPressed');
          
         }
         async function shareVideo() {
            try{
                 const video = document.getElementById('videoPreview');
                 const blob = await fetch(video.src).then(r => r.blob());
-                const file = new File([blob], "video.mp4", { type: "video/mp4" });
+                const file = new File([blob], "video.webm", { type: "video/webm" });
                 
                 if (navigator.share && navigator.canShare && navigator.canShare({files: [file]})) {
                   await navigator.share({
