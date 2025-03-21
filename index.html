@@ -487,28 +487,7 @@
          
         }
         async function shareVideo() {
-           try{
-                const video = document.getElementById('videoPreview');
-                const blob = await fetch(video.src).then(r => r.blob());
-                const file = new File([blob], "video.webm", { type: "video/webm" });
-                
-                if (navigator.share && navigator.canShare && navigator.canShare({files: [file]})) {
-                  await navigator.share({
-                      files: [file],
-                      title: 'Video Share',
-                  });
-                } else {
-                    console.log("navigator share not supported")
-                      const shareAPIError = "Sharing is not supported on your device. You can download the video instead"
-                       ShowError(shareAPIError);
-                  }
-             }
-             catch (error) {
-                 const shareAPIError = "There was an error trying to share the video";
-                ShowError(shareAPIError);
-                console.error(shareAPIError, error);
-           }
-           
+          window.unityInstance.SendMessage('ARCamera', 'OnShareVideoButtonPressed');
       }      
     
     </script>
