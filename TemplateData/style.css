@@ -14,6 +14,12 @@ body { padding: 0; margin: 0; overflow: hidden; }
     top: 80%;
     transform: translate(-50%, -60%) scale(0.4); /* Scale down to 80% */
 }
+#tap-container {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -65%) scale(0.4); /* Scale down to 80% */
+}
 #unity-progress-bar-empty { margin-left: auto; margin-right: auto; width: 141px; height: 18px; margin-top: 10px; background: url('progress-bar-empty-dark.png') no-repeat center }
 #unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }

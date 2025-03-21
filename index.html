@@ -47,6 +47,9 @@
       <br><br><br>
     </div>
     <div id="cameraButtonContainer" style="display:none">
+      <div id="tap-container">
+        <img src="tap.png" alt="Tap">
+    </div>
       <button id="recordButton" aria-label="Record"  >
          <div class="progress-ring">
             <svg class="progress-ring__circle" width="80" height="80" viewBox="0 0 80 80">
@@ -460,9 +463,11 @@
       }
       function HideVideoPreview(){
         var videoPreviewDiv = document.getElementById('videoPreviewDiv');
+        var tapcontainer = document.getElementById('tap-container');
            videoPreviewDiv.style.opacity = 0;
            setTimeout(()=>{
               videoPreviewDiv.style.visibility = 'hidden';
+              tapcontainer.style.opacity = 1;
               document.getElementById('cameraButtonContainer').style.display = "block";
             }, 500);
       }
