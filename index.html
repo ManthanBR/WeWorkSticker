@@ -464,6 +464,7 @@
       function HideVideoPreview(){
         var videoPreviewDiv = document.getElementById('videoPreviewDiv');
         var tapcontainer = document.getElementById('tap-container');
+        window.unityInstance.SendMessage('ARCamera', 'OnPreviewClosed');
            videoPreviewDiv.style.opacity = 0;
            setTimeout(()=>{
               videoPreviewDiv.style.visibility = 'hidden';
